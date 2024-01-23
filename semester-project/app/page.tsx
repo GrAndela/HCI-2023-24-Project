@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import "./adopt/animal.css";
+import "../components/footer/page";
+import Footer from '../components/footer/page';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 interface AnimalFields {
   name:string;
@@ -86,6 +89,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
+      <Footer/>
     </main>
   );
 }

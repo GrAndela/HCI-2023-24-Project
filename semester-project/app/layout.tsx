@@ -18,8 +18,8 @@ const pages = {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js lab project",
-  description: "Next.js lab project",
+  title: "Animal Shelter",
+  description: "Place Where We Love Animals",
 };
 
 export default function RootLayout({

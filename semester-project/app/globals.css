@@ -22,6 +22,7 @@ body {
 }
 
 .title {
+  color: #e8964d; 
   text-align: left;
   font-size: 42px;
   letter-spacing: 0.5em;
@@ -31,6 +32,3 @@ body {
   color: #663300; 
 }
 
-.title {
-  color: #e8964d ; 
-}
