@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Footer from '../../components/footer/page'; // Corrected import path
-import './about.css'; // Include the CSS file for styling
+import Footer from '../../components/footer/page'; 
+import './about.css'; 
 
 const About = () => {
     return (
@@ -14,14 +14,14 @@ const About = () => {
                     <h2 className="section-subtitle">Our Story</h2>
                     <p>
                         We started our journey in 2015 with a simple mission: to provide a safe and loving home for animals in need. 
-                        Since then, we have grown significantly, rescuing and caring for over [Number] pets each year.
+                        Since then, we have grown significantly, rescuing and caring for over 100 pets each year.
                     </p>
                 </section>
 
                 <section className="about-section">
                     <h2 className="section-subtitle">Our Location</h2>
                     <p>
-                        Visit us at [Address]. Our shelter is open for visits and adoptions from [Opening Hours]. We welcome you to come
+                        Visit us at Somewhere in the world. Our shelter is open for visits and adoptions from 8:00 until 20:00. We welcome you to come
                         and meet our wonderful animals!
                     </p>
                 </section>

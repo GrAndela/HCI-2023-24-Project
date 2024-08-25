@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import "./animal.css";
-
+import Footer from '../../components/footer/page'; 
 
 export interface AnimalParams {
   params: Params;
@@ -86,6 +86,7 @@ export default function Adopt({ params }: AnimalParams) {
           </li>
         ))}
       </ul>
+      <Footer />
     </div>
   );
 }

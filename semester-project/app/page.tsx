@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Footer from '../components/footer/page';
-import Dropdown from '@/components/dropdown/page';
 import '@fortawesome/fontawesome-free/css/all.css';
 import "./adopt/animal.css";
 
@@ -50,12 +49,6 @@ export default function Home() {
   return (
     <div className="app-container">
       <main className="flex min-h-screen flex-col items-center justify-between p-10">
-        <Dropdown
-          showDropdown={true}
-          onMouseOver={() => {}}
-          onMouseOut={() => {}}
-          notifyParent={() => {}}
-        />
         <div className="title">
           <span>A</span>nimal <span>S</span>helter
         </div>

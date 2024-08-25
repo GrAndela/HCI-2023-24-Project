@@ -1,13 +1,9 @@
-
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Button from "@/components/button/page";
-import Dropdown from '@/components/dropdown/page';
 import "../globals.css";
 
-
-// Define the pages
 const pages = {
   Home: "/",
   Adopt: "./adopt",
@@ -18,20 +14,6 @@ const pages = {
 };
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const handleMouseOver = () => {
-    setShowDropdown(true);
-  };
-
-  const handleMouseOut = () => {
-    setShowDropdown(false);
-  };
-
-  const notifyParent = () => {
-    setShowDropdown(false);
-  };
-
   return (
     <>
       <nav className="flex items-center justify-center p-4">
@@ -39,12 +21,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
           {Object.entries(pages).map(([name, path]) => (
             <li key={name}>
               <Button path={path} name={name} />
-              <Dropdown
-                showDropdown={showDropdown}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-                notifyParent={notifyParent}
-              />
             </li>
           ))}
         </ul>

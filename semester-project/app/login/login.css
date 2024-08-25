@@ -1,42 +1,100 @@
-
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .login-page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#fdd699;
-  }
-  
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-page {
+  min-height: 100vh; /* Ensure the page takes up the full height of the viewport */
+  display: flex;
+  flex-direction: column; /* Stack login box and footer vertically */
+  justify-content: center; /* Center the login box if there's extra space */
+  align-items: center;
+  background-color: #fdd699;
+  padding: 16px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 320px; 
+  text-align: center;
+  padding: 16px; 
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  margin-bottom: 80px; /* Allows the footer to be pushed down */
+}
+
+footer {
+  width: 100%;
+  background-color: #cc6600;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.login-heading {
+  font-size: 28px; 
+  margin-bottom: 16px; 
+  font-weight: bold;
+  color: #cc6600;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  margin: 8px 0; 
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 14px; 
+  font-size: 14px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #cc6600;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px 14px; 
+  margin-top: 16px; 
+  background-color: #cc6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #b35900;
+}
+
+@media (min-width: 768px) {
   .login-container {
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-  }
-  
-  .login-heading {
-    font-size: 32px; 
-    margin-bottom: 20px; 
-    font-weight: bold;
-    color:#cc6600;
-  }
-  
-  .input-container {
-    margin: 10px 0;
-  }
-  
-  .username-input,
-  .password-input {
-    width: 100%;
     padding: 24px; 
-    font-size: 16px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
   }
-  
+
+  .login-heading {
+    font-size: 30px; 
+  }
+
+  .input-field {
+    font-size: 16px; 
+    padding: 12px 16px; 
+  }
+
+  .login-button {
+    font-size: 16px; 
+  }
+}

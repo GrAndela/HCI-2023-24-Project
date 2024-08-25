@@ -1,8 +1,8 @@
 /* support-us.css */
 :root {
     --text-color: #663300; /* Color used in the footer */
-    --background-color: #f8f8f8;
-    --section-background: #ffffff;
+    --background-color: #ffd699;
+    --section-background: #cc6600;
     --border-radius: 0.5rem;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

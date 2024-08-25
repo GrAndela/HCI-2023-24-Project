@@ -17,9 +17,9 @@ const SupportUs = () => {
                         and shelter maintenance. Here’s how you can donate:
                     </p>
                     <ul>
-                        <li>Make a financial donation online through our website.</li>
-                        <li>Donate food, old blankets, beds, and toys for our pets.</li>
-                        <li>Contribute to our medical expenses fund.</li>
+                        <li>-Make a financial donation online through our website.</li>
+                        <li>-Donate food, old blankets, beds, and toys for our pets.</li>
+                        <li>-Contribute to our medical expenses fund.</li>
                     </ul>
                 </section>
 

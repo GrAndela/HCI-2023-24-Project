@@ -19,21 +19,22 @@
 }
 
 .footer-distributed .footer-left {
-  width: 40%;
+  width: 33.33%; /* Adjust width to equal spacing */
 }
 
 .footer-distributed .footer-center {
-  width: 35%;
+  width: 33.33%; /* Adjust width to equal spacing */
 }
 
 .footer-distributed .footer-right {
-  width: 25%;
+  width: 33.33%; /* Adjust width to equal spacing */
 }
 
 .footer-distributed h3 {
   color: #663300; /* Matching text color */
   font: normal 36px 'Open Sans', cursive;
   margin: 0;
+  padding: 0;
 }
 
 .footer-distributed h3 span {
