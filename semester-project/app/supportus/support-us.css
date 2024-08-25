@@ -1,0 +1,55 @@
+/* support-us.css */
+:root {
+    --text-color: #663300; /* Color used in the footer */
+    --background-color: #f8f8f8;
+    --section-background: #ffffff;
+    --border-radius: 0.5rem;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.support-us-container {
+    background-color: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+}
+
+.support-us-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section-title {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.support-us-section {
+    background-color: var(--section-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .support-us-main {
+        padding: 2rem;
+    }
+}

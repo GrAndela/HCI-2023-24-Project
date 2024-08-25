@@ -6,9 +6,11 @@ interface ButtonProps {
   path: string;
   name: string;
   onClick?: () => void;
+  setClickedButton?: React.Dispatch<React.SetStateAction<string>>; 
+  children?: React.ReactNode; // Add children prop
 }
 
-const Button: React.FC<ButtonProps> = ({ path, name, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ path, name, onClick, children }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseOver = () => {
@@ -29,18 +31,18 @@ const Button: React.FC<ButtonProps> = ({ path, name, onClick }) => {
     borderRadius: '5px',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease, color 0.3s ease',
-    whiteSpace:'nowrap'
+    whiteSpace: 'nowrap'
   };
 
   return (
-    <Link href={path}>
+    <Link href={path} passHref>
       <button
         onClick={onClick}
         style={buttonStyle}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
       >
-        {name}
+        {children || name} {/* Render children if provided, otherwise fallback to name */}
       </button>
     </Link>
   );

@@ -19,6 +19,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #ffd699;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .title {
@@ -32,3 +37,6 @@ body {
   color: #663300; 
 }
 
+.main-container {
+  flex: 1; /* Ensure main content takes available space */
+}
