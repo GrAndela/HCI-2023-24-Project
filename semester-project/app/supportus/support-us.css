@@ -22,7 +22,9 @@
 .section-title {
     color: var(--text-color);
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 2rem;
+    margin-top: -5px;
 }
 
 .support-us-section {

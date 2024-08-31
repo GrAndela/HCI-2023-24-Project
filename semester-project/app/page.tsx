@@ -10,7 +10,7 @@ interface AnimalFields {
   name: string;
   image: any;
   species: string;
-  description: string[]; // Ensure description is expected to be an array
+  description: string[];
 }
 
 interface Animal {

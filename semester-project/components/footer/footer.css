@@ -1,6 +1,6 @@
 /* footer.css */
 .footer-distributed {
-  background: #e8964d; /* Background color of footer */
+  background: #e8964d; 
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -9,6 +9,7 @@
   padding: 55px 50px;
   position: relative;
   bottom: 0;
+  left: 0;
 }
 
 .footer-distributed .footer-left,
@@ -19,30 +20,31 @@
 }
 
 .footer-distributed .footer-left {
-  width: 33.33%; /* Adjust width to equal spacing */
+  width: 33.33%; 
 }
 
 .footer-distributed .footer-center {
-  width: 33.33%; /* Adjust width to equal spacing */
+  width: 33.33%; 
 }
 
 .footer-distributed .footer-right {
-  width: 33.33%; /* Adjust width to equal spacing */
+  width: 33.33%; 
 }
 
 .footer-distributed h3 {
-  color: #663300; /* Matching text color */
+  color: #663300; 
   font: normal 36px 'Open Sans', cursive;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 .footer-distributed h3 span {
-  color: #663300; /* Matching text color */
+  color: #663300; 
 }
 
 .footer-distributed .footer-links {
-  color: #663300; /* Matching text color */
+  color: #663300; 
   margin: 20px 0 12px;
   padding: 0;
 }
@@ -52,25 +54,52 @@
   line-height: 1.8;
   font-weight: 400;
   text-decoration: none;
-  color: inherit; /* Use the color from parent */
+  color: inherit; 
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-distributed .footer-links a:hover {
+  color: #cc6600; 
 }
 
 .footer-distributed .footer-company-name {
-  color: #663300; /* Matching text color */
+  color: #663300; 
   font-size: 14px;
   font-weight: normal;
-  margin: 0;
+  margin: 0 5px;
 }
 
 .footer-distributed .footer-center p {
-  color: #663300; /* Matching text color */
+  color: #663300; 
   font-weight: 400;
   margin: 0;
+  margin-left: 10px;
+}
+
+.footer-distributed .footer-company-contact-description {
+  color: #663300; 
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  margin: 0;
+  margin-left: 15px;
+  line-height: 0.5;
+}
+
+.footer-distributed .footer-company-contact-title {
+  display: block;
+  color: #663300; 
+  font-size: 14px; 
+  font-weight: bold; 
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px; 
 }
 
 .footer-distributed .footer-company-about {
-  color: #663300; /* Matching text color */
-  line-height: 1.6; /* Increase line height for better readability */
+  color: #663300; 
+  line-height: 1.6; 
   font-size: 13px;
   font-weight: normal;
   margin: 0;
@@ -78,38 +107,38 @@
 
 .footer-distributed .footer-company-about-title {
   display: block;
-  color: #663300; /* Matching text color */
-  font-size: 14px; /* Slightly larger font size for the title */
-  font-weight: bold; /* Make the title bold */
-  margin-bottom: 10px; /* Space between title and description */
+  color: #663300; 
+  font-size: 14px; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
 }
 
 .footer-distributed .footer-company-about-description {
   display: block;
-  color: #663300; /* Matching text color */
+  color: #663300; 
 }
 
 .footer-distributed .footer-icons {
-  display: flex; /* Arrange icons in a row */
-  justify-content: center; /* Center icons horizontally */
-  gap: 10px; /* Space between icons */
-  margin-bottom: 20px; /* Space below the icons */
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  margin-bottom: 20px; 
 }
 
 .footer-distributed .footer-icons a {
-  width: 30px; /* Adjust icon size */
-  height: 30px; /* Adjust icon size */
-  font-size: 16px; /* Adjust font size */
-  line-height: 30px; /* Center icon vertically */
+  width: 30px; 
+  height: 30px; 
+  font-size: 16px; 
+  line-height: 30px; 
 }
 
 .footer-distributed .footer-icons img {
-  border-radius: 50%; /* Ensure icons are round */
+  border-radius: 50%; 
 }
 
 @media (max-width: 768px) {
   .footer-distributed {
-    padding: 40px 20px; /* Adjust padding on smaller screens */
+    padding: 40px 20px; 
   }
   
   .footer-distributed .footer-left,

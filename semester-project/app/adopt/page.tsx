@@ -55,10 +55,10 @@ export default function Adopt({ params }: AnimalParams) {
 
   return (
     <div className="main-container">
-      <h1 className="text-3xl font-bold p-10" style={{ color: '#cc6600', textTransform: 'capitalize' }}>
+      <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
       {params.id} Animals for adoption
       </h1>
-      <ul className="flex flex-col gap-8">
+      <ul className="flex flex-col gap-3">
         {entries.map((entry) => (
           <li key={entry.sys.id} className="animal-box">
             {entry.fields.image && (

@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Footer from '../../components/footer/page'; // Corrected import path
-import './support-us.css'; // Include the CSS file for styling
+import Footer from '../../components/footer/page'; 
+import './support-us.css'; 
 
 const SupportUs = () => {
     return (

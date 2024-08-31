@@ -11,6 +11,7 @@ body {
   align-items: center;
   background-color: #fdd699;
   padding: 16px;
+  left: 0;
 }
 
 .login-container {

@@ -24,7 +24,7 @@ h1, h2, h3 {
 .care-section {
     padding: 2rem;
     margin-bottom: 2rem;
-    background-color: #ffffff;
+    background-color: #cc6600;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +51,7 @@ h1, h2, h3 {
 
 .neutering-info {
     margin-top: 2rem;
-    background-color: #eaeaea;
+    background-color: #cc6600;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;

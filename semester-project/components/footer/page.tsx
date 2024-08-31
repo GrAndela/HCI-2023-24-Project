@@ -19,15 +19,15 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="footer-center">
-        <div>
-          <p><span>Location:</span> Somewhere in the world</p>
-        </div>
-        <div>
-          <p>Phone: +385 91 777 565</p>
-        </div>
-        <div>
-          <p><a href="mailto:support@company.com">Email: animalshelter@gmail.com</a></p>
-        </div>
+        <p className="footer-company-contact">
+          <span className="footer-company-contact-title">Where to find us</span>
+          <br/>
+          <span className="footer-company-contact-description">Location: Somewhere in the world</span>
+          <br/>
+          <span className="footer-company-contact-description">Contact: +385 91 777 235</span>
+          <br/>
+          <span className="footer-company-contact-description">Email: animalshelter@gmail.com</span>
+        </p>  
       </div>
 
       <div className="footer-right">
