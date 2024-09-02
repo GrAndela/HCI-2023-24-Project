@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import "./animal.css";
-import Footer from '../../components/footer/page'; 
+import Footer from '../../components/footer/page';
 
 export interface AnimalParams {
   params: Params;
@@ -11,13 +11,12 @@ export interface AnimalParams {
 interface Params {
   id: string;
 }
-
+ 
 interface AnimalFields {
- name:string;
-  image:any;
+  name: string;
+  image: any;
   species: string;
-  description: string[]; 
-    
+  description: string[];
 }
 
 interface Animal {
@@ -40,9 +39,9 @@ export default function Adopt({ params }: AnimalParams) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-         const response = (await client.getEntries({
+        const response = (await client.getEntries({
           content_type: 'animal',
-        })) as { items: Animal[] }; 
+        })) as { items: Animal[] };
 
         setEntries(response.items);
       } catch (error) {
@@ -54,10 +53,10 @@ export default function Adopt({ params }: AnimalParams) {
   }, []);
 
   return (
-    <div className="main-container">
-      <main className = "flex flex-col min-h-screen items-center justify-between w-full">
+    <div className="main-container"> {/* Wrapped in main-container */}
+      <main className="flex flex-col min-h-screen items-center justify-between w-full">
         <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
-        {params.id} Animals for adoption
+          {params.id} Animals for adoption
         </h1>
         <ul className="flex flex-col gap-3">
           {entries.map((entry) => (
@@ -71,12 +70,12 @@ export default function Adopt({ params }: AnimalParams) {
               )}
               <div className="animal-description">
                 <span className="name">{entry.fields.name}</span>
-                
+
                 <p className="text-xl p-10">
                   {entry.fields.description.slice(0, 3).map((sentence, index) => (
                     <React.Fragment key={index}>
                       {sentence}
-                      {index !== 4 && <br />} 
+                      {index !== 4 && <br />}
                     </React.Fragment>
                   ))}
                 </p>
@@ -88,7 +87,7 @@ export default function Adopt({ params }: AnimalParams) {
           ))}
         </ul>
       </main>
-      <Footer /> 
+      <Footer /> {/* Ensures footer is displayed */}
     </div>
   );
 }

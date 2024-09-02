@@ -1,103 +1,107 @@
 /* petcare.css */
 :root {
-    --text-color: #663300; /* Color used in the footer */
+  --text-color: #663300;
+  --background-color: #ffd699; /* Background color */
+  --section-bg-color: #cc6600; /* Background color for section */
+  --neutering-text-color: #ffd699; /* Text color for neutering info */
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffd699;
-    color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1, h2, h3 {
-    color: var(--text-color);
-    text-align: center;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin: 1rem 0; /* Adjusted margin for better alignment */
 }
 
 .care-section {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background-color: #cc6600;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  /* Removed background color and box-shadow */
 }
 
 .care-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .care-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 0.5rem;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
 .care-text {
-    flex: 1;
-    text-align: justify;
-    line-height: 1.6;
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 600px; /* Ensure text rows are not too wide */
 }
 
 .neutering-info {
-    margin-top: 2rem;
-    background-color: #cc6600;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  border: 1px solid var(--text-color);
+  color: var(--neutering-text-color);
+}
+
+.neutering-info h3 {
+  color: var(--neutering-text-color);
+  margin-bottom: 1rem; /* Ensure spacing between heading and text */
 }
 
 .neutering-info p {
-    margin: 0;
-    color: var(--text-color);
+  margin: 0;
+  color: var(--neutering-text-color);
+  line-height: 1.6; /* Consistent line height */
 }
 
 @media (min-width: 768px) {
-    .care-content {
-        flex-direction: row;
-        gap: 2rem;
-    }
+  .care-content {
+      flex-direction: row;
+      gap: 2rem;
+  }
 }
 
-/* Media queries for responsiveness */
-
-/* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
-    .section-title {
-      font-size: 1.5rem;
-    }
-  
-    .care-section {
-      padding: 1rem;
-    }
-  
-    .care-content {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .care-image {
-      max-width: 100%;
-    }
+  .section-title {
+    font-size: 1.5rem;
   }
-  
-  /* Tablets and Small Desktops (640px - 1023px) */
-  @media (min-width: 640px) and (max-width: 1023px) {
-    .section-title {
-      font-size: 1.75rem;
-    }
-  
-    .care-section {
-      padding: 1.5rem;
-    }
+
+  .care-section {
+    padding: 1rem;
   }
+
+  .care-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .care-image {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .care-section {
+    padding: 1.5rem;
+  }
+}

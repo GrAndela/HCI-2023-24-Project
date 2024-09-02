@@ -86,7 +86,7 @@ export default function Home() {
           </ul>
         </div>
       </main>
-      <Footer />
+      <Footer /> {/* Footer should be added here if it’s intended for individual pages */}
     </div>
   );
 }

@@ -1,108 +1,105 @@
-
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #ffd699;
-    border-radius: 40px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures footer is at the bottom of the page */
+  align-items: center;
+  min-height: 100vh; /* Keeps the container full height */
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffd699;
+  border-radius: 40px;
+}
 
-  .name {
-    text-align: center;
-    margin-top: 5px;
-    margin-left: 40px;
-    font-size: 30px;
-    color:#ffd699;
-  }
-  
+.name {
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 40px;
+  font-size: 30px;
+  color: #ffd699;
+}
 
-  .animal-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #cc6600; 
-    border-radius: 40px;
-    height: 400px;
-  }
-  
-  
-  .animal-image {
-    width: 70%; 
-    height: 90%;
-    object-fit: cover;
-    border-radius: 40px;
-    margin-left: 10px;
-    margin-right: 20px;
+.animal-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #cc6600;
+  border-radius: 40px;
+  height: 400px;
+}
 
-  }
-  
-  .animal-description {
-    flex-grow: 1;
-    color: #663300;
-  }
-  
-  .read-more-link {
-    text-decoration: none;
-    color: #800000; 
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 40px;
-    margin-bottom: 10px;
-    align-self: flex-start;
-  }
+.animal-image {
+  width: 70%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 40px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.animal-description {
+  flex-grow: 1;
+  color: #663300;
+}
+
+.read-more-link {
+  text-decoration: none;
+  color: #800000;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
 
 /* Media queries for responsiveness */
 
 /* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
   .main-container {
-    padding: 10px;
-    align-items: center;
-    margin: auto;
+      padding: 10px;
+      align-items: center;
+      margin: auto;
   }
 
   .name {
-    font-size: 20px;
-    margin-top: 5px;
+      font-size: 20px;
+      margin-top: 5px;
   }
 
   .animal-box {
-    padding: 5px;
-    border-radius: 20px; 
-    max-width: 100%; 
+      padding: 5px;
+      border-radius: 20px;
+      max-width: 100%;
   }
 
   .animal-image {
-    margin-bottom: 5px;
+      margin-bottom: 5px;
   }
 
   .animal-description {
-    font-size: 10px;
-    overflow-wrap: break-word; 
+      font-size: 10px;
+      overflow-wrap: break-word;
   }
 }
 
 /* Tablets and Small Desktops (640px - 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {
   .main-container {
-    padding: 15px;
+      padding: 15px;
   }
 
   .name {
-    font-size: 26px;
+      font-size: 26px;
   }
 
   .animal-box {
-    padding: 10px;
-    border-radius: 30px; 
+      padding: 10px;
+      border-radius: 30px;
   }
 
   .animal-description {
-    font-size: 15px;
+      font-size: 15px;
   }
 }

@@ -39,6 +39,24 @@ body {
   color: #663300; 
 }
 
-.main-container {
-  flex: 1;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Takes up remaining space */
+}
+
+.footer-distributed {
+  background: #e8964d;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 14px sans-serif;
+  padding: 30px 20px;
+  position: relative; /* Changed from fixed to relative */
+  margin-top: auto; /* Ensures the footer moves to the bottom */
 }

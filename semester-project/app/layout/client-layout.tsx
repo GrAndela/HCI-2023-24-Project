@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Button from "@/components/button/page";
+import Footer from "@/components/footer/page"; // Importing the Footer
 import "../globals.css";
 
 const pages = {
@@ -15,7 +16,7 @@ const pages = {
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="app-container">
       <nav className="flex items-center justify-center p-4">
         <ul className="flex gap-8">
           {Object.entries(pages).map(([name, path]) => (
@@ -25,7 +26,10 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
           ))}
         </ul>
       </nav>
-      {children}
-    </>
+      <main className="main-content">
+        {children}
+      </main>
+      <Footer /> {/* Footer should be added here */}
+    </div>
   );
 }

@@ -1,16 +1,20 @@
-/* footer.css */
+/* components/footer/footer.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .footer-distributed {
-  background: #e8964d; 
+  background: #e8964d;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-  position: relative;
-  margin: 0;
-  bottom: 0;
-  left: 0;
+  font: bold 14px sans-serif;
+  padding: 30px 20px;
+  position: relative; /* Changed from fixed to relative */
+  margin-top: auto; /* Ensures the footer moves to the bottom */
 }
 
 .footer-distributed .footer-left,
@@ -21,32 +25,32 @@
 }
 
 .footer-distributed .footer-left {
-  width: 33.33%; 
+  width: 33.33%;
 }
 
 .footer-distributed .footer-center {
-  width: 33.33%; 
+  width: 33.33%;
 }
 
 .footer-distributed .footer-right {
-  width: 33.33%; 
+  width: 33.33%;
 }
 
 .footer-distributed h3 {
-  color: #663300; 
-  font: normal 36px 'Open Sans', cursive;
+  color: #663300;
+  font: normal 24px 'Open Sans', cursive;
   margin: 0;
   padding: 0;
   text-align: left;
 }
 
 .footer-distributed h3 span {
-  color: #663300; 
+  color: #663300;
 }
 
 .footer-distributed .footer-links {
-  color: #663300; 
-  margin: 20px 0 12px;
+  color: #663300;
+  margin: 10px 0;
   padding: 0;
 }
 
@@ -55,88 +59,88 @@
   line-height: 1.8;
   font-weight: 400;
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
   margin: 0 5px;
   transition: color 0.3s ease;
 }
 
 .footer-distributed .footer-links a:hover {
-  color: #cc6600; 
+  color: #cc6600;
 }
 
 .footer-distributed .footer-company-name {
-  color: #663300; 
-  font-size: 14px;
+  color: #663300;
+  font-size: 12px;
   font-weight: normal;
   margin: 0 5px;
 }
 
 .footer-distributed .footer-center p {
-  color: #663300; 
+  color: #663300;
   font-weight: 400;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 10px;
 }
 
 .footer-distributed .footer-company-contact-description {
-  color: #663300; 
-  font-size: 14px;
+  color: #663300;
+  font-size: 12px;
   font-weight: normal;
   display: block;
   margin: 0;
   margin-left: 15px;
-  line-height: 0.5;
+  line-height: 1.2;
 }
 
 .footer-distributed .footer-company-contact-title {
   display: block;
-  color: #663300; 
-  font-size: 14px; 
-  font-weight: bold; 
+  color: #663300;
+  font-size: 12px;
+  font-weight: bold;
   margin-left: 15px;
   margin-top: 5px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .footer-distributed .footer-company-about {
-  color: #663300; 
-  line-height: 1.6; 
-  font-size: 13px;
+  color: #663300;
+  line-height: 1.4;
+  font-size: 12px;
   font-weight: normal;
   margin: 0;
 }
 
 .footer-distributed .footer-company-about-title {
   display: block;
-  color: #663300; 
-  font-size: 14px; 
-  font-weight: bold; 
-  margin-top: 20px;
-  margin-bottom: 15px; 
+  color: #663300;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .footer-distributed .footer-company-about-description {
   display: block;
-  color: #663300; 
+  color: #663300;
 }
 
 .footer-distributed .footer-icons {
-  display: flex; 
-  justify-content: center; 
-  gap: 10px; 
-  margin-bottom: 20px; 
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-distributed .footer-icons a {
-  width: 30px; 
-  height: 30px; 
-  font-size: 16px; 
-  line-height: 30px; 
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .footer-distributed .footer-icons img {
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 /* Media queries for responsiveness */
@@ -144,8 +148,7 @@
 /* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
   .footer-distributed {
-    padding: 20px; 
-    margin: auto;
+    padding: 15px;
   }
   
   .footer-distributed .footer-left,
@@ -154,7 +157,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .footer-distributed .footer-center,
@@ -166,7 +169,7 @@
 /* Tablets and Small Desktops (640px - 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {
   .footer-distributed {
-    padding: 30px; 
+    padding: 20px;
   }
   
   .footer-distributed .footer-left,
@@ -175,13 +178,13 @@
     width: 100%;
     display: inline-block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 768px) {
   .footer-distributed {
-    padding: 40px 20px; 
+    padding: 25px 15px;
   }
   
   .footer-distributed .footer-left,
@@ -190,7 +193,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .footer-distributed .footer-center {

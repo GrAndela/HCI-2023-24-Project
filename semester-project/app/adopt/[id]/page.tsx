@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import * as contentful from 'contentful';
 import "./adopt.css";
+import Footer from '../../../components/footer/page';
 
 export interface AdoptParams {
   params: Params;
@@ -41,7 +42,7 @@ export default function AdoptList({ params }: AdoptParams) {
         const response = await client.getEntries({
           content_type: 'animal',
           'sys.id': params.id.toString(),
-          include: 3, 
+          include: 3,
         }) as { items: Animal[] };
 
         if (response.items.length > 0) {
@@ -59,21 +60,23 @@ export default function AdoptList({ params }: AdoptParams) {
 
   if (!entry) {
     return (
-      <main className="main-container">
+      <div className="main-container"> {/* Wrapped in main-container */}
         <p>Entry not found.</p>
-      </main>
+        <Footer /> {/* Ensures footer is displayed */}
+      </div>
     );
   }
 
   const imageUrl = entry.fields.image?.fields.file.url;
 
   return (
-    <main className="main-container">
+    <div className="main-container"> {/* Wrapped in main-container */}
       <h1 className="heading">{entry.fields.name}</h1>
       <div className="image-container">
         {imageUrl && <img className="image" src={imageUrl} alt="Image Description" />}
       </div>
       <span className="description">{entry.fields.description}</span>
-    </main>
+      <Footer /> {/* Ensures footer is displayed */}
+    </div>
   );
 }
