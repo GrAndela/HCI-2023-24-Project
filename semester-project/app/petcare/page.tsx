@@ -14,7 +14,7 @@ const PetCare = () => {
                     <h2 className="section-title">Caring for Dogs</h2>
                     <div className="care-content">
                         <img
-                            src="/images/dog-care.jpg"
+                            src="./images/dog_image.jpg"
                             alt="Dog Care"
                             className="care-image"
                         />
@@ -38,7 +38,7 @@ const PetCare = () => {
                     <h2 className="section-title">Caring for Cats</h2>
                     <div className="care-content">
                         <img
-                            src="/images/cat-care.jpg"
+                            src="./images/cat_image.jpg"
                             alt="Cat Care"
                             className="care-image"
                         />

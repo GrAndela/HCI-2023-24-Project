@@ -1,0 +1,42 @@
+/* buttons.css */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    width: 110px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffd699;
+    background-color: #cc6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .button:hover {
+    background-color: #663300;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button {
+      font-size: 10px;
+      padding: 4px 10px;
+    }
+  }
+  

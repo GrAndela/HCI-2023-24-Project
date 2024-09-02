@@ -55,3 +55,35 @@ li {
         padding: 2rem;
     }
 }
+
+/* Media queries for responsiveness */
+
+/* Mobile Devices (up to 639px) */
+@media (max-width: 639px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .support-us-main {
+      padding: 1rem;
+    }
+  
+    .support-us-section {
+      padding: 1rem;
+    }
+  }
+  
+  /* Tablets and Small Desktops (640px - 1023px) */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .support-us-main {
+      padding: 1.5rem;
+    }
+  
+    .support-us-section {
+      padding: 1.5rem;
+    }
+  }

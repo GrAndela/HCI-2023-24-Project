@@ -55,38 +55,40 @@ export default function Adopt({ params }: AnimalParams) {
 
   return (
     <div className="main-container">
-      <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
-      {params.id} Animals for adoption
-      </h1>
-      <ul className="flex flex-col gap-3">
-        {entries.map((entry) => (
-          <li key={entry.sys.id} className="animal-box">
-            {entry.fields.image && (
-              <img
-                src={entry.fields.image.fields.file.url}
-                alt={entry.fields.name}
-                className="animal-image"
-              />
-            )}
-            <div className="animal-description">
-              <span className="name">{entry.fields.name}</span>
-              
-              <p className="text-xl p-10">
-                {entry.fields.description.slice(0, 3).map((sentence, index) => (
-                  <React.Fragment key={index}>
-                    {sentence}
-                    {index !== 4 && <br />} 
-                  </React.Fragment>
-                ))}
-              </p>
-              <Link href={`/adopt/${entry.sys.id}`} className="read-more-link">
-                Read more...
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <Footer />
+      <main className = "flex flex-col min-h-screen items-center justify-between w-full">
+        <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
+        {params.id} Animals for adoption
+        </h1>
+        <ul className="flex flex-col gap-3">
+          {entries.map((entry) => (
+            <li key={entry.sys.id} className="animal-box">
+              {entry.fields.image && (
+                <img
+                  src={entry.fields.image.fields.file.url}
+                  alt={entry.fields.name}
+                  className="animal-image"
+                />
+              )}
+              <div className="animal-description">
+                <span className="name">{entry.fields.name}</span>
+                
+                <p className="text-xl p-10">
+                  {entry.fields.description.slice(0, 3).map((sentence, index) => (
+                    <React.Fragment key={index}>
+                      {sentence}
+                      {index !== 4 && <br />} 
+                    </React.Fragment>
+                  ))}
+                </p>
+                <Link href={`/adopt/${entry.sys.id}`} className="read-more-link">
+                  Read more...
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <Footer /> 
     </div>
   );
 }

@@ -99,3 +99,45 @@ footer {
     font-size: 16px; 
   }
 }
+
+/* Media queries for responsiveness */
+
+/* Mobile Devices (up to 639px) */
+@media (max-width: 639px) {
+  .login-container {
+    padding: 12px; 
+  }
+
+  .login-heading {
+    font-size: 24px; 
+  }
+
+  .input-field {
+    font-size: 12px; 
+    padding: 8px 12px; 
+  }
+
+  .login-button {
+    font-size: 12px; 
+  }
+}
+
+/* Tablets and Small Desktops (640px - 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .login-container {
+    padding: 20px; 
+  }
+
+  .login-heading {
+    font-size: 26px; 
+  }
+
+  .input-field {
+    font-size: 14px; 
+    padding: 10px 14px; 
+  }
+
+  .login-button {
+    font-size: 14px; 
+  }
+}
