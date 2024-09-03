@@ -1,22 +1,24 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures footer is at the bottom of the page */
+  justify-content: space-between; 
   align-items: center;
-  min-height: 100vh; /* Keeps the container full height */
+  min-height: 100vh; 
   max-width: 800px;
   margin: auto;
   padding: 20px;
   background-color: #ffd699;
   border-radius: 40px;
+  box-sizing: border-box;
 }
 
 .name {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-left: 40px;
   font-size: 30px;
   color: #ffd699;
+  box-sizing: border-box;
 }
 
 .animal-box {
@@ -27,11 +29,12 @@
   background-color: #cc6600;
   border-radius: 40px;
   height: 400px;
+  box-sizing: border-box;
 }
 
 .animal-image {
-  width: 70%;
-  height: 90%;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 40px;
   margin-left: 10px;
@@ -56,33 +59,62 @@
 /* Media queries for responsiveness */
 
 /* Mobile Devices (up to 639px) */
+/* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
   .main-container {
-      padding: 10px;
-      align-items: center;
-      margin: auto;
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
   }
 
   .name {
-      font-size: 20px;
-      margin-top: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center; /* Center align text */
+    width: 100%; /* Ensure it fits within the container */
+    box-sizing: border-box;
   }
 
   .animal-box {
-      padding: 5px;
-      border-radius: 20px;
-      max-width: 100%;
+    padding: 10px; /* Increased padding for better spacing */
+    border-radius: 20px;
+    width: 100%; /* Ensure it uses full width */
+    box-sizing: border-box;
+    background-color: #cc6600; /* Ensure background color is applied */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    margin-bottom: 20px; /* Space between animal boxes */
   }
 
   .animal-image {
-      margin-bottom: 5px;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 15px; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Space below the image */
   }
 
   .animal-description {
-      font-size: 10px;
-      overflow-wrap: break-word;
+    font-size: 14px; /* Increased font size for readability */
+    overflow-wrap: break-word; /* Ensure text wraps properly */
+    margin: 0 10px; /* Add side margins to prevent text from touching edges */
+    text-align: center; /* Center align text */
+  }
+
+  .read-more-link {
+    text-decoration: none;
+    color: #800000; /* Link color */
+    font-weight: bold;
+    font-size: 14px; /* Increase font size for readability */
+    margin-top: 10px; /* Space above the link */
+    display: block; /* Ensure the link takes up full width */
+    text-align: center; /* Center align text */
   }
 }
+
 
 /* Tablets and Small Desktops (640px - 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {

@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
           <span>A</span>nimal <span>S</span>helter
         </h3>
         <p className="footer-links">
-          <a href="#" className="link-1">Home</a>
-          <a href="#">Adopt</a>
-          <a href="#">Pet Care</a>
-          <a href="#">Support Us</a>
-          <a href="#">About Us</a>
+          <a href="/" className="link-1">Home</a>
+          <a href="/adopt">Adopt</a>
+          <a href="/petcare">Pet Care</a>
+          <a href="/supportus">Support Us</a>
+          <a href="/aboutus">About Us</a>
         </p>
         <p className="footer-company-name">Animal Shelter © 2024</p>
       </div>

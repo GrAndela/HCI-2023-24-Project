@@ -57,7 +57,6 @@ const SupportUs = () => {
                     </p>
                 </section>
             </main>
-            <Footer />
         </div>
     );
 };

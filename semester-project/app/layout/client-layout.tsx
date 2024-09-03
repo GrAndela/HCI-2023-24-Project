@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Button from "@/components/button/page";
-import Footer from "@/components/footer/page"; // Importing the Footer
+import Footer from "@/components/footer/page"; 
 import "../globals.css";
 
 const pages = {
@@ -29,7 +29,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <main className="main-content">
         {children}
       </main>
-      <Footer /> {/* Footer should be added here */}
+      <Footer /> 
     </div>
   );
 }

@@ -53,7 +53,7 @@ export default function Adopt({ params }: AnimalParams) {
   }, []);
 
   return (
-    <div className="main-container"> {/* Wrapped in main-container */}
+    <div className="main-container"> 
       <main className="flex flex-col min-h-screen items-center justify-between w-full">
         <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
           {params.id} Animals for adoption
@@ -87,7 +87,6 @@ export default function Adopt({ params }: AnimalParams) {
           ))}
         </ul>
       </main>
-      <Footer /> {/* Ensures footer is displayed */}
     </div>
   );
 }

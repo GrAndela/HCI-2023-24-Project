@@ -65,7 +65,6 @@ const PetCare = () => {
                     </p>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 };

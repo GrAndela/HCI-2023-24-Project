@@ -7,9 +7,9 @@ body {
 }
 
 img {
-  width: 100%; /* Ensure responsiveness */
-  max-width: 400px; /* Set max width for the image */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  max-width: 400px;
+  height: auto;
   margin-bottom: 20px;
   object-fit: cover;
   border-radius: 40px;

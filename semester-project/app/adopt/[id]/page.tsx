@@ -76,7 +76,6 @@ export default function AdoptList({ params }: AdoptParams) {
         {imageUrl && <img className="image" src={imageUrl} alt="Image Description" />}
       </div>
       <span className="description">{entry.fields.description}</span>
-      <Footer /> {/* Ensures footer is displayed */}
     </div>
   );
 }

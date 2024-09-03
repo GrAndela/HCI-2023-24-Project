@@ -1,9 +1,9 @@
 /* petcare.css */
 :root {
   --text-color: #663300;
-  --background-color: #ffd699; /* Background color */
-  --section-bg-color: #cc6600; /* Background color for section */
-  --neutering-text-color: #ffd699; /* Text color for neutering info */
+  --background-color: #ffd699; 
+  --section-bg-color: #cc6600; 
+  --neutering-text-color: #ffd699; 
 }
 
 body {
@@ -21,13 +21,12 @@ h1, h2, h3 {
 
 .section-title {
   font-size: 2rem;
-  margin: 1rem 0; /* Adjusted margin for better alignment */
+  margin: 1rem 0; 
 }
 
 .care-section {
   padding: 1.5rem;
   margin-bottom: 2rem;
-  /* Removed background color and box-shadow */
 }
 
 .care-content {
@@ -46,7 +45,7 @@ h1, h2, h3 {
 .care-text {
   text-align: justify;
   line-height: 1.6;
-  max-width: 600px; /* Ensure text rows are not too wide */
+  max-width: 600px; 
 }
 
 .neutering-info {
@@ -61,13 +60,13 @@ h1, h2, h3 {
 
 .neutering-info h3 {
   color: var(--neutering-text-color);
-  margin-bottom: 1rem; /* Ensure spacing between heading and text */
+  margin-bottom: 1rem; 
 }
 
 .neutering-info p {
   margin: 0;
   color: var(--neutering-text-color);
-  line-height: 1.6; /* Consistent line height */
+  line-height: 1.6; 
 }
 
 @media (min-width: 768px) {

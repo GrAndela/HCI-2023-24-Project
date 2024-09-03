@@ -31,7 +31,6 @@ const LoginPage: React.FC = () => {
           </button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };

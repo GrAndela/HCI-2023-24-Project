@@ -4,10 +4,10 @@ body {
 }
 
 .login-page {
-  min-height: 100vh; /* Ensure the page takes up the full height of the viewport */
+  min-height: 100vh; 
   display: flex;
-  flex-direction: column; /* Stack login box and footer vertically */
-  justify-content: center; /* Center the login box if there's extra space */
+  flex-direction: column; 
+  justify-content: center; 
   align-items: center;
   background-color: #fdd699;
   padding: 16px;
@@ -23,13 +23,13 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
-  margin-bottom: 80px; /* Allows the footer to be pushed down */
+  margin-bottom: 80px; 
 }
 
 footer {
   width: 100%;
   background-color: #cc6600;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  margin-top: auto; 
 }
 
 .login-heading {

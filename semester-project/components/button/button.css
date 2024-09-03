@@ -18,25 +18,41 @@
     background-color: #663300;
   }
   
-  /* Responsive styles */
-  @media (max-width: 1024px) {
-    .button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
+ /* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons vertically */
   }
   
-  @media (max-width: 768px) {
-    .button {
-      font-size: 12px;
-      padding: 6px 12px;
-    }
+  .button {
+    font-size: 14px; /* Slightly smaller font size */
+    padding: 8px 16px; /* Adjusted padding */
+    width: auto; /* Keep the button size based on content */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .button-container {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
   }
   
-  @media (max-width: 480px) {
-    .button {
-      font-size: 10px;
-      padding: 4px 10px;
-    }
+  .button {
+    font-size: 14px; /* Slightly smaller font size */
+    padding: 8px 16px; /* Keep padding consistent with other sizes */
+    width: 100%; /* Full width for small screens */
+    max-width: 250px; /* Set a max-width to keep buttons manageable */
   }
+}
   
