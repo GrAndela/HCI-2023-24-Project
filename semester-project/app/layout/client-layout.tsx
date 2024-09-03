@@ -7,11 +7,11 @@ import "../globals.css";
 
 const pages = {
   Home: "/",
-  Adopt: "./adopt",
-  "Pet Care": "./petcare",
-  "Support Us": "./supportus",
-  "About Us": "./aboutus",
-  "Log In": "./login"
+  Adopt: "/adopt",
+  "Pet Care": "/petcare",
+  "Support Us": "/supportus",
+  "About Us": "/aboutus",
+  "Log In": "/login"
 };
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {

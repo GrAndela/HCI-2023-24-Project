@@ -43,16 +43,52 @@
 /* Small phones */
 @media (max-width: 480px) {
   .button-container {
+    display: flex; /* Use flexbox for layout */
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row; /* Keep buttons in a single row */
+    gap: 1px; /* Minimal gap between buttons */
+    justify-content: flex-start; /* Distribute buttons evenly */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    padding: 0; /* Add some padding to the container */
   }
-  
+
   .button {
-    font-size: 14px; /* Slightly smaller font size */
-    padding: 8px 16px; /* Keep padding consistent with other sizes */
-    width: 100%; /* Full width for small screens */
-    max-width: 250px; /* Set a max-width to keep buttons manageable */
+    font-size: 10px; /* Smaller font size for buttons */
+    padding: 2px 4px; /* Smaller padding to fit more buttons */ /* Let buttons adjust based on content */
+    flex: 0 0 auto; /* Allow buttons to shrink and grow */
+    min-width: 20px; /* Ensure buttons have a minimum width */
+    box-sizing: border-box; /* Include padding and borders in the button's width */
+    text-align: center;
+    white-space: nowrap;
   }
 }
+
+/* Media Query for screens with max-width of 639px */
+@media (max-width: 639px) {
+  .button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px; /* Adjust gap to ensure buttons fit */
+    justify-content: flex-start; /* Align buttons to the start */
+    flex-wrap: nowrap; /* Ensure buttons stay in a single row */
+    padding: 0; /* Remove padding to maximize space */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    width: 100%; /* Ensure container takes full width */
+  }
+
+  .button {
+    font-size: 12px; /* Set a smaller font size */
+    padding: 4px 8px; /* Set minimal padding for smaller buttons */
+    margin: 0; /* Remove any margins */
+    flex: 1 1 auto; /* Allow buttons to shrink and grow equally */
+    min-width: 80px; /* Set a reasonable minimum width for buttons */
+    max-width: 120px; /* Limit maximum width to ensure they fit */
+    box-sizing: border-box; /* Include padding and borders in width */
+    text-align: center; /* Center text within buttons */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
+
+
   

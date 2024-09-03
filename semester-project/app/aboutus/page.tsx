@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Footer from '../../components/footer/page'; 
 import './about.css'; 
 
 const About = () => {
@@ -45,7 +44,6 @@ const About = () => {
                 <section className="about-section">
                     <h2 className="section-subtitle">Stories from Our Volunteers</h2>
                     <div className="story">
-                        <img src="/images/volunteer-story.jpg" alt="Volunteer Story" className="story-image" />
                         <div className="story-text">
                             <p>
                                 Meet [Volunteer Name]. They started volunteering with us after finding a stray kitten in their neighborhood. 

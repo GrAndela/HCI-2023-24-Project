@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import * as contentful from 'contentful';
 import "./adopt.css";
-import Footer from '../../../components/footer/page';
 
 export interface AdoptParams {
   params: Params;

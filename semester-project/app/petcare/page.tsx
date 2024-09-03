@@ -14,7 +14,7 @@ const PetCare = () => {
                     <h2 className="section-title">Caring for Dogs</h2>
                     <div className="care-content">
                         <img
-                            src="./images/dog_image.jpg"
+                            src="dog_image.jpg"  
                             alt="Dog Care"
                             className="care-image"
                         />
@@ -38,7 +38,7 @@ const PetCare = () => {
                     <h2 className="section-title">Caring for Cats</h2>
                     <div className="care-content">
                         <img
-                            src="./images/cat_image.jpg"
+                            src="cat_image.jpg"
                             alt="Cat Care"
                             className="care-image"
                         />
@@ -51,7 +51,8 @@ const PetCare = () => {
                             <p>
                                 Grooming is also crucial, especially for long-haired cats, to prevent mats and tangles.
                                 Regular brushing helps reduce shedding and hairballs. Feeding should be balanced, with
-                                high-quality food appropriate for their age and health status.
+                                high-quality food appropriate for their age and health status. They are known for their
+                                love of play.
                             </p>
                         </div>
                     </div>

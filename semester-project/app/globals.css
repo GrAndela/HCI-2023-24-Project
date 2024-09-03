@@ -42,11 +42,11 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh; 
 }
 
 .main-content {
-  flex: 1; /* Takes up remaining space */
+  flex: 1; 
 }
 
 .footer-distributed {
@@ -57,6 +57,15 @@ body {
   text-align: left;
   font: bold 14px sans-serif;
   padding: 30px 20px;
-  position: relative; /* Changed from fixed to relative */
-  margin-top: auto; /* Ensures the footer moves to the bottom */
+  position: relative; 
+  margin-top: auto; 
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 30px; /* Smaller font size for mobile screens */
+    text-align: center; /* Center the title on small screens */
+    letter-spacing: 0.3em; /* Adjust letter spacing for readability */
+    padding: 10px; /* Add some padding */
+  }
 }

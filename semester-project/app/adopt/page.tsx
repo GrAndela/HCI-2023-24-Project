@@ -70,7 +70,7 @@ export default function Adopt({ params }: AnimalParams) {
           {params.id} Animals for adoption
         </h1>
         <div className="filter-container">
-          <label htmlFor="species">Filter by species:</label>
+          <label htmlFor="species">Filter by species: </label>
           <select 
             id="species"
             value={selectedSpecies}
