@@ -35,6 +35,8 @@ const client = contentful.createClient({
 
 export default function Adopt({ params }: AnimalParams) {
   const [entries, setEntries] = useState<Animal[]>([]);
+  const [filteredEntries, setFilteredEntries] = useState<Animal[]>([]);
+  const [selectedSpecies, setSelectedSpecies] = useState<string>('all');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,6 +46,7 @@ export default function Adopt({ params }: AnimalParams) {
         })) as { items: Animal[] };
 
         setEntries(response.items);
+        setFilteredEntries(response.items); // Initially show all entries
       } catch (error) {
         console.error('Error fetching entries:', error);
       }
@@ -52,14 +55,35 @@ export default function Adopt({ params }: AnimalParams) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (selectedSpecies === 'all') {
+      setFilteredEntries(entries);
+    } else {
+      setFilteredEntries(entries.filter(animal => animal.fields.species === selectedSpecies));
+    }
+  }, [selectedSpecies, entries]);
+
   return (
     <div className="main-container"> 
       <main className="flex flex-col min-h-screen items-center justify-between w-full">
         <h1 className="text-3xl font-bold p-10" style={{ color: '#663300', textTransform: 'capitalize' }}>
           {params.id} Animals for adoption
         </h1>
+        <div className="filter-container">
+          <label htmlFor="species">Filter by species:</label>
+          <select 
+            id="species"
+            value={selectedSpecies}
+            onChange={(e) => setSelectedSpecies(e.target.value)}
+            className="filter-select"
+          >
+            <option value="all">All</option>
+            <option value="dog">Dogs</option>
+            <option value="cat">Cats</option>
+          </select>
+        </div>
         <ul className="flex flex-col gap-3">
-          {entries.map((entry) => (
+          {filteredEntries.map((entry) => (
             <li key={entry.sys.id} className="animal-box">
               {entry.fields.image && (
                 <img
@@ -70,7 +94,6 @@ export default function Adopt({ params }: AnimalParams) {
               )}
               <div className="animal-description">
                 <span className="name">{entry.fields.name}</span>
-
                 <p className="text-xl p-10">
                   {entry.fields.description.slice(0, 3).map((sentence, index) => (
                     <React.Fragment key={index}>

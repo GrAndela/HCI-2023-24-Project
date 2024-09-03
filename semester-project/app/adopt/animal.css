@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -48,7 +54,7 @@
 
 .read-more-link {
   text-decoration: none;
-  color: #800000;
+  color: #ffd699;
   font-weight: bold;
   margin-top: 10px;
   margin-left: 40px;
@@ -56,9 +62,41 @@
   align-self: flex-start;
 }
 
+/* Filter container */
+.filter-container {
+  margin: 20px 0;
+  color: #663300;
+  text-align: center; /* Center align the filter */
+}
+
+/* Filter label */
+.filter-label {
+  display: block;
+  margin-bottom: 10px; /* Space between label and dropdown */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #663300;
+}
+
+/* Filter select dropdown */
+.filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px; /* Match the border radius from other elements */
+  border: 1px solid #cc6600; /* Match the border color */
+  background-color: #ffd699; 
+  color: #663300; /* Text color for filter options */
+  cursor: pointer; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+.filter-select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #663300; /* Highlight border color on focus */
+  box-shadow: 0 0 0 3px rgba(102, 51, 0, 0.2); /* Add focus shadow effect */
+}
+
 /* Media queries for responsiveness */
 
-/* Mobile Devices (up to 639px) */
 /* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
   .main-container {
@@ -106,15 +144,19 @@
 
   .read-more-link {
     text-decoration: none;
-    color: #800000; /* Link color */
+    color: #ffd699; /* Link color */
     font-weight: bold;
     font-size: 14px; /* Increase font size for readability */
     margin-top: 10px; /* Space above the link */
     display: block; /* Ensure the link takes up full width */
     text-align: center; /* Center align text */
   }
-}
 
+  .filter-select {
+    width: 100%; /* Full width on mobile */
+    font-size: 14px; /* Adjust font size */
+  }
+}
 
 /* Tablets and Small Desktops (640px - 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {

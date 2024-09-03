@@ -62,7 +62,6 @@ export default function AdoptList({ params }: AdoptParams) {
     return (
       <div className="main-container"> {/* Wrapped in main-container */}
         <p>Entry not found.</p>
-        <Footer /> {/* Ensures footer is displayed */}
       </div>
     );
   }

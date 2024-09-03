@@ -1,89 +1,94 @@
 /* support-us.css */
 :root {
-    --text-color:#ffd699;
-    --background-color: #ffd699;
-    --section-background: #cc6600;
-    --border-radius: 0.5rem;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --text-color: #ffd699;
+  --background-color: #ffd699;
+  --section-background: #cc6600;
+  --heading-color: #663300;
+  --border-radius: 0.5rem;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .support-us-container {
-    background-color: var(--background-color);
-    font-family: 'Open Sans', sans-serif;
-    padding: 2rem;
+  background-color: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
+  padding: 2rem;
 }
 
 .support-us-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .section-title {
-    color: var(--text-color);
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    margin-top: -5px;
+  color: var(--heading-color);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem; /* Increased distance from content */
+  margin-top: 1rem; /* Adjusted margin from the top */
 }
 
 .support-us-section {
-    background-color: var(--section-background);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    margin-bottom: 2rem;
+  background-color: var(--section-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .section-subtitle {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p, ul {
+  color: var(--text-color); /* Ensure text color matches background */
+  text-align: left; /* Left-align text */
 }
 
 ul {
-    margin-top: 1rem;
-    margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
 }
 
 li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px) {
-    .support-us-main {
-        padding: 2rem;
-    }
+/* Adjust heading text within sections */
+.support-us-section p, .support-us-section ul {
+  color: var(--text-color);
 }
 
 /* Media queries for responsiveness */
 
 /* Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
-    .section-title {
+  .section-title {
       font-size: 1.5rem;
-    }
-  
-    .support-us-main {
-      padding: 1rem;
-    }
-  
-    .support-us-section {
-      padding: 1rem;
-    }
   }
-  
-  /* Tablets and Small Desktops (640px - 1023px) */
-  @media (min-width: 640px) and (max-width: 1023px) {
-    .section-title {
+
+  .support-us-main {
+      padding: 1rem;
+  }
+
+  .support-us-section {
+      padding: 1rem;
+  }
+}
+
+/* Tablets and Small Desktops (640px - 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section-title {
       font-size: 1.75rem;
-    }
-  
-    .support-us-main {
-      padding: 1.5rem;
-    }
-  
-    .support-us-section {
-      padding: 1.5rem;
-    }
   }
+
+  .support-us-main {
+      padding: 1.5rem;
+  }
+
+  .support-us-section {
+      padding: 1.5rem;
+  }
+}

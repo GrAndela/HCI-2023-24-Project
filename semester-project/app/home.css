@@ -1,0 +1,110 @@
+/* General container for the home page */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Adjust spacing between title and animal list */
+.title {
+  margin-bottom: 40px; /* Increased space between title and containers */
+}
+
+/* Container holding the list of animal cards */
+.animal-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual animal card */
+.animal-card {
+  background-color: #cc6600;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* For absolute positioning of the button */
+}
+
+/* Ensures images are uniform in size */
+.animal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Styling for the animal name */
+.animal-name {
+  margin: 15px 0;
+  font-size: 24px;
+  color: #ffd699;
+}
+
+/* Description inside the animal card */
+.animal-description {
+  font-size: 16px;
+  color: #663300;
+  margin-bottom: 40px; /* Increased space below description */
+  text-align: center;
+}
+
+/* Uniform styling for the "Read more" link */
+.read-more {
+  text-decoration: none;
+  color: #ffd699;
+  font-weight: bold;
+  position: absolute; /* Absolute positioning within the card */
+  bottom: 20px; /* Align at the bottom of the card */
+  left: 20px; /* Align to the left of the card */
+}
+
+/* Responsive adjustments */
+
+/* Tablets and smaller screens */
+@media (max-width: 1023px) {
+  .animal-card {
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 639px) {
+  .animal-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .animal-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .animal-image {
+    height: auto; /* Allow image height to adjust */
+    aspect-ratio: 3 / 2; /* Maintain aspect ratio */
+  }
+
+  .animal-description {
+    font-size: 14px; /* Adjust font size for mobile */
+    margin-bottom: 30px; /* Adjust space below description */
+  }
+
+  .read-more {
+    bottom: 10px; /* Adjust button position */
+    left: 10px; /* Adjust button position */
+  }
+}

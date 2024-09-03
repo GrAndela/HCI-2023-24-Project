@@ -1,16 +1,29 @@
+/* adopt.css */
 body {
   font-family: Arial, sans-serif;
   color: #663300;
   text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: flex;
   justify-content: center;
+  width: 100%; /* Ensure the container uses the full width available */
 }
 
 img {
-  width: 100%; 
-  max-width: 400px;
+  max-width: 70%; /* Reduced size of the image */
   height: auto;
   margin-bottom: 20px;
   object-fit: cover;
-  border-radius: 40px;
+  border-radius: 20px; /* Reduced border-radius for a sleeker look */
+}
+
+/* Additional responsiveness */
+@media (max-width: 639px) {
+  img {
+    max-width: 90%; /* Ensure the image does not overflow on smaller screens */
+  }
 }

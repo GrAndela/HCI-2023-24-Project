@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Footer from '../components/footer/page';
-import '@fortawesome/fontawesome-free/css/all.css';
-import "./adopt/animal.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "./home.css"; // Reference the new CSS file for home page styles
 
 interface AnimalFields {
   name: string;
@@ -47,43 +46,37 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="app-container">
-      <main className="flex min-h-screen flex-col items-center justify-between p-10">
+    <div className="home-container">
+      <main className="flex flex-col items-center justify-between p-10">
         <div className="title">
           <span>A</span>nimal <span>S</span>helter
         </div>
-        <div className="main-container">
-          <ul className="flex flex-col gap-8">
-            {entries.map((entry) => (
-              <li key={entry.sys.id} className="animal-box">
-                {entry.fields.image && (
-                  <img
-                    src={entry.fields.image.fields.file.url}
-                    alt={entry.fields.name}
-                    className="animal-image"
-                  />
-                )}
-                <div className="animal-description">
-                  <span className="name">{entry.fields.name}</span>
-                  <p className="text-xl p-10">
-                    {Array.isArray(entry.fields.description) ? (
-                      entry.fields.description.slice(0, 3).map((sentence, index) => (
-                        <React.Fragment key={index}>
-                          {sentence}
-                          {index !== 2 && <br />}
-                        </React.Fragment>
-                      ))
-                    ) : (
-                      <span>Description is not available.</span>
-                    )}
-                  </p>
-                  <Link href={`/adopt/${entry.sys.id}`} className="read-more-link">
-                    Read more...
-                  </Link>
-                </div>
-              </li>
-            ))}
-          </ul>
+        <div className="animal-list">
+          {entries.map((entry) => (
+            <div key={entry.sys.id} className="animal-card">
+              {entry.fields.image && (
+                <img
+                  src={entry.fields.image.fields.file.url}
+                  alt={entry.fields.name}
+                  className="animal-image"
+                />
+              )}
+              <div className="animal-info">
+                <h2 className="animal-name">{entry.fields.name}</h2>
+                <p className="animal-description">
+                  {entry.fields.description.slice(0, 3).map((sentence, index) => (
+                    <React.Fragment key={index}>
+                      {sentence}
+                      {index !== 2 && <br />}
+                    </React.Fragment>
+                  ))}
+                </p>
+                <Link href={`/adopt/${entry.sys.id}`} className="read-more">
+                  Read more...
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </main>
     </div>
